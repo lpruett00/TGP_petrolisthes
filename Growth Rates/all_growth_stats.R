@@ -84,7 +84,7 @@ str(filtered_data)
 
 
 # Fit the linear mixed-effects model
-model_lmer <- lmer(slope ~ treatment * parent.treatment * brood * cage + (1 | cage/embryo), 
+model_lmer <- lmer(slope ~ treatment * parent.treatment * brood  + (1 | cage/embryo), 
                    data = filtered_data)
 
 # Display the summary of the model
